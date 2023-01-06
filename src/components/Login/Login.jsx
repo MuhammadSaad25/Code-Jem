@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Login.css'
-// import Navbar from '../Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
 
@@ -28,15 +28,9 @@ const Login = () => {
 
       })
       .catch((error) => {
-        // const errorCode = error.code;
         console.log(error.message);
         setErrorMsg(error.message);
-        // if (error.message === 'Firebase:Error (auth/invalid-email).') {
-        //   setErrorMsg('Please fill all required fields')
-        // }
-        // if (error.message === 'Firebase:Error (auth/email-already-in-use).') {
-        //   setErrorMsg('user already exists')
-        // }
+      
 
       })
     // e.reset()
@@ -44,7 +38,7 @@ const Login = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="login-container">
         <form className="login-form">
           <p>Login</p>

@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-// import Navbar from "../Navbar/Navbar";
-// import { Link, navigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 import { Link, useNavigate } from "react-router-dom";
-
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from '../../firebaseConfig/firebaseConfig'
 import { collection, addDoc } from 'firebase/firestore'
 import './Signup.css'
-// C:\clone repo batech 8\ecommerce\src\firebaseConfigs\firebaseConfigs.js
-// import { createUserWithEmailAndPassword } from "firebase/auth";
-// import { auth, db } from "../../firebaseConfigs/firebaseConfigs";
-// import { collection, addDoc } from "firebase/firestore";
 
 
 const Signup = () => {
@@ -55,12 +49,6 @@ const Signup = () => {
       .catch((error) => {
         console.log(error.message);
         setErrorMsg(error.message);
-        // if (error.message === 'Firebase:Error (auth/invalid-email).') {
-        //   setErrorMsg('Please fill all required fields')
-        // }
-        // if (error.message === 'Firebase:Error (auth/email-already-in-use).') {
-        //   setErrorMsg('user already exists')
-        // }
 
       })
       // e.reset()
@@ -68,7 +56,7 @@ const Signup = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="signup-container">
         <form className="signup-form" onSubmit={handleSubmit}>
           <p>Create Account</p>
@@ -103,7 +91,7 @@ const Signup = () => {
 
           <div>
             <span>Already have an Account?</span>
-            {/* <Link to="/login">Sign in</Link> */}
+            <Link to="/login">Sign in</Link>
           </div>
 
         </form>
