@@ -53,7 +53,6 @@ const Navbar = () => {
             <Link to="/">
               <button>Login</button>
             </Link>
-
           </nav>}
 
           {loggeduser && <nav>
@@ -69,6 +68,9 @@ const Navbar = () => {
             </Link>
             <Link to="/pizza">
               <button>Pizza</button>
+            </Link>
+            <Link to="/favouritedata">
+              <button>Favourite Data</button>
             </Link>
             <button className="logout-btn" onClick={handleLogout}>Logout</button>
           </nav>}
