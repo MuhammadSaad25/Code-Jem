@@ -44,13 +44,13 @@ const Navbar = () => {
 
         <div className="RightContainer">
           {!loggeduser && <nav>
-            <Link to="/">
+            {/* <Link to="/">
               <button>Home</button>
-            </Link>
+            </Link> */}
             <Link to="/signup">
               <button>Register</button>
             </Link>
-            <Link to="/login">
+            <Link to="/">
               <button>Login</button>
             </Link>
 
@@ -60,6 +60,15 @@ const Navbar = () => {
 
             <Link to="/">
               <button>Home</button>
+            </Link>
+            <Link to="/baryani">
+              <button>Biryani</button>
+            </Link>
+            <Link to="/burger">
+              <button>Burger</button>
+            </Link>
+            <Link to="/pizza">
+              <button>Pizza</button>
             </Link>
             <button className="logout-btn" onClick={handleLogout}>Logout</button>
           </nav>}
