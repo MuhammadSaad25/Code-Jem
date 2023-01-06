@@ -11,10 +11,34 @@
     /* height: 80%; */
     /* width: 80%; */
     box-shadow: 0px 0px 5px 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.dataDiv h6{
+text-align: center;    
 }
 
 .dataDiv img{
     /* height: 90%; */
     /* width: 40%; */
     overflow: hidden;
+}
+
+button{
+    /* margin-bottom: 15px; */
+    height: 30px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+}
+
+button:hover{
+    /* background-color: white; */
+    color: orange;
+    cursor: pointer;
 }

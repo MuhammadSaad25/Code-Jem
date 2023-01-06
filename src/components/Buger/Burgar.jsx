@@ -29,7 +29,7 @@ const Burgar = () => {
                     <div className='title'>
                         <h6>{products.title}</h6>
                     </div>
-                    {/* <button onClick={favourite}>Favourite/</button> */}
+                    <button >Add to Favourite</button>
                 </div>
             ))}
             </div>
