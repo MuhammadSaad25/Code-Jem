@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 // import Navbar from "../Navbar/Navbar";
-import { Link } from "react-router-dom";
+// import { Link, navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from '../../firebaseConfig/firebaseConfig'
 import { collection, addDoc } from 'firebase/firestore'
@@ -18,7 +20,7 @@ const Signup = () => {
   const [phonenumber, setPhonenumber] = useState("");
   const [address, setAddress] = useState("");
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
@@ -42,10 +44,10 @@ const Signup = () => {
           setPassword('')
           setErrorMsg('')
 
-          // setTimeout(() => {
-          //   setSuccessMsg('');
-          //   navigate('/home')
-          // }, 1000)
+          setTimeout(() => {
+            setSuccessMsg('');
+            navigate('/login')
+          }, 1000)
 
         })
           .catch((error) => { setErrorMsg(error.message) });
